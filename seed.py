@@ -8,7 +8,6 @@ if uri.startswith("postgres://"):
 if uri == "postgresql:///warbler":
     app.config['SQLALCHEMY_DATABASE_URI'] = uri
 
-    app.config['SQLALCHEMY_ECHO'] = True
 
 
 print(uri)
