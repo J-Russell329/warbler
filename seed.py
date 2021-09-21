@@ -1,11 +1,14 @@
 """Seed database with sample data from CSV Files."""
 from app import *
 
+app = Flask(__name__)
 uri = os.environ.get("DATABASE_URL", 'postgresql:///warbler')  # or other relevant config var
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 if uri == "postgresql:///warbler":
     app.config['SQLALCHEMY_DATABASE_URI'] = uri
+
+console.log(uri)
 
 
 from csv import DictReader
