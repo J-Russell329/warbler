@@ -8,7 +8,7 @@ if uri.startswith("postgres://"):
 if uri == "postgresql:///warbler":
     app.config['SQLALCHEMY_DATABASE_URI'] = uri
 
-console.log(uri)
+print(uri)
 
 
 from csv import DictReader
