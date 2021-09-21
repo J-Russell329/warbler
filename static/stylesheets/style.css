@@ -202,7 +202,7 @@ nav + .container {
 	opacity: 0.7;
 	background-size: cover;
 	background-position: top center;
-	clip-path: (0% 0%, 100% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
 }
 
 .full-width {
