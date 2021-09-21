@@ -1,10 +1,18 @@
 """Seed database with sample data from CSV Files."""
+from app import *
+
+uri = os.environ.get("DATABASE_URL", 'postgresql:///warbler')  # or other relevant config var
+if uri.startswith("postgres://"):
+    uri = uri.replace("postgres://", "postgresql://", 1)
+if uri == "postgresql:///warbler":
+    app.config['SQLALCHEMY_DATABASE_URI'] = uri
+
 
 from csv import DictReader
 from app import db
 from models import User, Message, Follows
 
-
+connect_db(app)
 db.drop_all()
 db.create_all()
 

@@ -21,6 +21,9 @@ if uri.startswith("postgres://"):
 if uri == "postgresql:///warbler":
     app.config['SQLALCHEMY_DATABASE_URI'] = uri
 
+
+
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = False
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = True
